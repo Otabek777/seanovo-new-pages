@@ -609,6 +609,9 @@
                 <div class="product__page__box">
                     <div class="product__page__images">
                         <div class="block">
+                            <span class="discount">
+                                -3%
+                            </span>
                             <div class="product__page__img_mobile">
                                 <div class="product__page__img_block">
                                     <div class="img">
@@ -778,11 +781,17 @@
                         <div class="wrap">
                             <div class="price">
                                 <h6>Оптовая цена</h6>
-                                <h5>130 000 ₽</h5>
+                                <h5>130 000 ₽
+                                    <span class="discount">-3%</span>
+                                </h5>
+                                <p>140 016 ₽</p>
                             </div>
                             <div class="price">
                                 <h6>Розничная цена</h6>
-                                <h5>121 900 ₽</h5>
+                                <h5>121 900 ₽
+                                    <span class="discount">-3%</span>
+                                </h5>
+                                <p>130 016 ₽</p>
                             </div>
                             <p class="In_stock">
                                 <span></span>
@@ -1511,6 +1520,8 @@
                                                     </div>
                                                     <span>x4</span>
                                                     <h5>1 700 ₽</h5>
+                                                    <p class="discount">-3%</p>
+                                                    <h6>2 016 ₽</h6>
                                                 </div>
                                             </div>
                                             <div class="wrap">
@@ -3960,7 +3971,7 @@
     <script>
         $('.kits__slider').slick({
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 300,
             slidesToShow: 3,
             slidesToScroll: 1,
