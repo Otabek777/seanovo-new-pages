@@ -6386,7 +6386,7 @@ ul, ol {
 }
 
 .card3__left {
-  max-width: calc(100% - 260px);
+  max-width: calc(100% - 328px);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6484,6 +6484,89 @@ ul, ol {
   fill: #FFFFFF;
 }
 
+.select {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.new-select {
+  position: relative;
+  border: 1px solid #014888;
+  padding: 15px 32px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  color: #014888;
+  border-radius: 8px;
+}
+
+.new-select__list {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-width: 1px 4px 1px 1px;
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-radius: 8px;
+  padding: 30px 0;
+}
+
+.new-select__list.on {
+  display: block;
+}
+
+.new-select__item span {
+  display: block;
+  padding: 4px 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #5F7283;
+}
+
+.new-select__item span:hover {
+  font-weight: 700;
+  color: #014888;
+}
+
+.new-select:after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: 22px;
+  top: 21px;
+  background: url("../img/select-down.svg") no-repeat center center;
+  -webkit-transition: all 0.27s ease-in-out;
+  -o-transition: all 0.27s ease-in-out;
+  transition: all 0.27s ease-in-out;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.new-select.on:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 1024px) {
   .header.fixed .header__bottom {
     height: 94px;
@@ -6518,6 +6601,9 @@ ul, ol {
 }
 
 @media screen and (max-width: 1024px) {
+  .card3__select::after {
+    display: none;
+  }
   .card3__left {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6526,6 +6612,9 @@ ul, ol {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+  .card3__scheme {
+    max-width: 260px;
   }
   .card3__select {
     margin-bottom: 80px;
