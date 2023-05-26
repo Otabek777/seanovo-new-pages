@@ -5533,6 +5533,8 @@ display: none; }
 }
 
 .new-select__list {
+    max-height: 247px;
+    overflow-y: scroll;
     position: absolute;
     top: 52px;
     left: 0;
@@ -5542,12 +5544,25 @@ display: none; }
     z-index: 2;
     background: #fff;
     user-select: none;
-    border-width: 1px 4px 1px 1px;
+    border-width: 1px 1px 1px 1px;
     border-style: solid;
     border-color: #EEEEEE;
     border-radius: 8px;
     padding: 30px 0;
 }
+.new-select__list::-webkit-scrollbar {
+background-color: #EEEEEE;
+width: 4px; }
+
+.new-select__list::-webkit-scrollbar-track {
+background-color: #EEEEEE; }
+
+.new-select__list::-webkit-scrollbar-thumb {
+    background-color: #00335E; }
+
+.new-select__list::-webkit-scrollbar-button {
+display: none; }
+  
 
 .new-select__list.on {
     display: block;
